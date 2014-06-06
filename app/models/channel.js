@@ -1,16 +1,22 @@
 exports.definition = {
     config : {
-        columns : {
+        "columns" : {
             "id" : "String",
             "name" : "String",
+            "program" : {
+                "name" : "String",
+                "description" : "String",
+                "image" : "String",
+                "start" : "String",
+                "end" : "String"
+            },
             "attendance" : int,
             "full" : boolean,
-            capacity : String,
-
+            "capacity" : "String",
         },
-        adapter : {
-            type : "localStorage",
-            collection_name : "channel"
+        "adapter" : {
+            "type" : "localStorage",
+            "collection_name" : "ChannelCollection"
         }
     },
     extendModel : function(Model) {

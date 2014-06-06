@@ -1,9 +1,19 @@
 exports.definition = {
     config : {
-
-        adapter : {
-            type : "localStorage",
-            collection_name : "user"
+        "URL" : Titanium.App.Properties.getString('apiUrl') + "/user",
+        "adapter" : {
+            "type" : "restapi",
+            "collection_name" : "UserCollection",
+            "idAttribute" : "_id"
+        },
+        "columns" : {
+            "_id" : "String",
+            "nick" : "String",
+            "name" : "String",
+            "email" : "String",
+            "banned" : boolean,
+            "online" : boolean,
+            "facebookId" : "String"
         }
     },
     extendModel : function(Model) {
