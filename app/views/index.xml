@@ -1,0 +1,4 @@
+<Alloy>
+    <!-- Android -->
+    <Require id="hub" src="hub" platform="android,ios"/>
+</Alloy>

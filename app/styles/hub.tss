@@ -1,0 +1,20 @@
+"#body": {
+	top: 80,
+	backgroundColor: "#FFF6E5"
+},
+"ListView": {
+	backgroundColor: "#FFF6E5"
+},
+".subtitle": {
+	height: 60,
+	backgroundColor: "#D13C1C"
+},
+".subtitle_text":{
+	color: "#FFF6E5", //front color
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: 20,
+		fontWeigth: "bold",
+		color: "FFF6E5"
+	}
+}
