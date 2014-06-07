@@ -1,6 +1,6 @@
 exports.definition = {
     config : {
-        "URL" : Titanium.App.Properties.getString('apiUrl') + "/user",
+        "URL" : Alloy.CFG.apiUrl + "/user",
         "adapter" : {
             "type" : "restapi",
             "collection_name" : "UserCollection",

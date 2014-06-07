@@ -13,8 +13,6 @@
     <analytics>true</analytics>
     <guid>926199bd-1ff3-46d9-a524-3f2c6faf2817</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
-    <property name="apiUrl" type="string">http://fxos.abct.io/api</property>
-    <property name="facebookId" type="string"></property>
     <ios>
         <plist>
             <dict>

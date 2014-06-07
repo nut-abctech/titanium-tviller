@@ -1,8 +1,20 @@
+//Calling Alloy.CFG.apiUrl
+// env:development = For targets for dev, runing in either the simulator or emulator.
+// env:test = For testing on device.
+// env:production = For built production, running after package installatoin.
 {
-	"global": {}, 
-	"env:development": {}, 
-	"env:test": {}, 
-	"env:production": {}, 
+	"global": {
+		"facebook_app_id" : ""
+	}, 
+	"env:development": {
+		"apiUrl" : ""
+	}, 
+	"env:test": {
+		"apiUrl" : ""
+	}, 
+	"env:production": {
+		"apiUrl" : ""
+	}, 
 	"os:android": {},
 	"os:blackberry": {},
 	"os:ios": {},
