@@ -9,3 +9,7 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+if (OS_IOS || OS_ANDROID) {
+    Alloy.Collections.channel = Alloy.createCollection('channel');
+    Alloy.Collections.toplist = Alloy.createCollection('channel');
+}

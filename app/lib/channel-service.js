@@ -3,8 +3,8 @@
  */
 exports.channelService = function() {
     var methods = {
-        initialModel : function() {
-
+        refresh : function(){
+            Alloy.Collections.Channels.fetchFromServer();
         },
         getToplist : function() {
 
@@ -13,4 +13,5 @@ exports.channelService = function() {
 
         }
     };
+    _.extends(this, methods);
 };

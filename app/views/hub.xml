@@ -1,23 +1,33 @@
 <Alloy>
-    <Window class="container">
+    <Window id="win" class="container">
         <View id="header">
             <Label id="appName" text="Tviller"></Label>
         </View>
         <View id="body">
-            <ListView id="channelsView">
-                <ListSection id="toplist">
+            <ListView id="channelsView" defaultItemTemplate="channel-template">
+                <Templates>
+                    <ItemTemplate name="channel-template" class="row">
+                        <ImageView bindId="image" class="img"/>
+                        <Label bindId="program_name" class="row_title"/>
+                        <Label bindId="duration" class="row_subtitle"/>
+                    </ItemTemplate>
+                </Templates>
+
+                <ListSection id="toplist" dataCollection="toplist" dataTransform="transformChannelModel">
                     <HeaderView>
-                        <View class="subtitle">
-                            <Label class="subtitle_text" text="Popular Channels"></Label>
+                        <View class="section">
+                            <Label class="section_text" text="Popular Channels"></Label>
                         </View>
                     </HeaderView>
+                    <ListItem template="{template}" image:image="{channelLogo}" program_name:text="{program_name}" duration:text="{duration}"/>
                 </ListSection>
-                <ListSection id="allChannels" class="subtitle" headerTitle="All channels">
+                <ListSection id="allChannels" dataCollection="channel" dataTransform="transformChannelModel">
                     <HeaderView>
-                        <View class="subtitle">
-                            <Label class="subtitle_text" text="All Channels"></Label>
+                        <View class="section">
+                            <Label class="section_text" text="All Channels"></Label>
                         </View>
                     </HeaderView>
+                    <ListItem template="{template}" image:image="{channelLogo}" program_name:text="{program_name}" duration:text="{duration}"/>
                 </ListSection>
             </ListView>
         </View>

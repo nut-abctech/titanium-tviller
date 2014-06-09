@@ -44,7 +44,7 @@
 <setting id="js.formatter.spaces.after.conditional.parentheses.opening" value="0"/>
 <setting id="xml.formatter.formatter.on" value="@formatter:on"/>
 <setting id="css.formatter.formatter.on.off.enabled" value="false"/>
-<setting id="json.formatter.formatter.tabulation.char" value="editor"/>
+<setting id="json.formatter.formatter.tabulation.char" value="space"/>
 <setting id="html.formatter.formatter.indentation.size" value="4"/>
 <setting id="json.formatter.formatter.tabulation.size" value="4"/>
 <setting id="xml.formatter.formatter.on.off.enabled" value="false"/>
@@ -120,7 +120,7 @@
 <setting id="js.formatter.newline.before.finally" value="false"/>
 <setting id="css.formatter.spaces.after.colon" value="1"/>
 <setting id="html.formatter.line.preserve" value="1"/>
-<setting id="tss.formatter.formatter.tabulation.char" value="editor"/>
+<setting id="tss.formatter.formatter.tabulation.char" value="space"/>
 <setting id="js.formatter.newline.before.catch" value="false"/>
 <setting id="html.formatter.line.after.non.html" value="1"/>
 <setting id="com.aptana.formatter.profiles.active" value="meetv-titanium-project-format"/>

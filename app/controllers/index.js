@@ -1,1 +1,2 @@
- $.hub.getView().open();
+// open window
+$.hub.getView().open();
