@@ -1,0 +1,5 @@
+<Alloy>
+    <NavigationWindow platform="ios" formFactor="handheld">
+        <Require id="hub" src="hub"/>
+    </NavigationWindow>
+</Alloy>

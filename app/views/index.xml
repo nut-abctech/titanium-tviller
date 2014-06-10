@@ -1,4 +1,5 @@
 <Alloy>
+
     <!-- Android -->
-    <Require id="hub" src="hub" platform="android,ios"/>
+    <!-- <Require id="master" src="master" platform="android"/> -->
 </Alloy>

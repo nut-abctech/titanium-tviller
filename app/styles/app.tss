@@ -1,26 +1,3 @@
-".container": {
-	backgroundColor: "#333"
-},
-"#header": {
-	width: Titanium.UI.FILL,
-	height: 80,
-	top: 5
-},
-"#footer": {
-	width: Titanium.UI.FILL,
-	bottom: 0,
-	backgroundColor: "#333"
-},
-"#appName": {
-	color: "#FFF6E5", //front color
-	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	font: {
-		fontSize: 25,
-		fontWeigth: "bold"
-	}
-},
-"Toolbar": {
-	width: Titanium.UI.FILL,
-	bottom: 0,
-	barColor: "#333"
+"#container": {
+    backgroundColor: "#FFF6E5"
 }

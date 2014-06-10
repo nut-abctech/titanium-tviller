@@ -1,0 +1,7 @@
+<Alloy>
+    <Window id="chatRoomWin" backButtonTitle="">
+        <RightNavButton>
+            <Button id="twitterBtn">Twitter</Button>
+        </RightNavButton>
+    </Window>
+</Alloy>

@@ -13,7 +13,6 @@ exports.definition = {
             "program_end" : "text"
         },
         "defaults" : {
-            "isToplist" : "0",
             "program_name" : "No program"
         },
         "adapter" : {
@@ -45,7 +44,7 @@ exports.definition = {
                         // this.responseText
                         // this.status;
                         Ti.API.debug('HTTP status : ' + this.status);
-                        Ti.API.debug('Received data : ' + this.responseText);
+                        Ti.API.trace('Received data : ' + this.responseText);
                         var chnList = JSON.parse(this.responseText);
                         _.each(chnList, function(chn) {
                             var channelModel = Alloy.createModel('channel', {

@@ -20,6 +20,19 @@ function transformChannelModel(model) {
     return transform;
 }
 
-$.win.addEventListener("close", function() {
+$.channelsView.addEventListener('itemclick', function(e) {
+    // prevent bubbling up to the row
+    e.cancelBubble = true;
+    var item = e.section.getItemAt(e.itemIndex);
+    var chatRoom = Alloy.createController('chat_room', {
+        roomId : item.channel.id
+    }).getView();
+    Alloy.Globals.navwin.openWindow(chatRoom, {
+        animated : true
+    });
+});
+//window
+$.hubWin.addEventListener("close", function() {
+    Ti.API.debug('close hub win');
     $.destroy();
 });

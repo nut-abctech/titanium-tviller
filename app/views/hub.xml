@@ -1,49 +1,29 @@
 <Alloy>
-    <Window id="win" class="container">
-        <View id="header">
-            <Label id="appName" text="Tviller"></Label>
-        </View>
-        <View id="body">
-            <ListView id="channelsView" defaultItemTemplate="channel-template">
-                <Templates>
-                    <ItemTemplate name="channel-template" class="row">
-                        <ImageView bindId="image" class="img"/>
-                        <Label bindId="program_name" class="row_title"/>
-                        <Label bindId="duration" class="row_subtitle"/>
-                    </ItemTemplate>
-                </Templates>
-
-                <ListSection id="toplist" dataCollection="toplist" dataTransform="transformChannelModel">
-                    <HeaderView>
-                        <View class="section">
-                            <Label class="section_text" text="Popular Channels"></Label>
-                        </View>
-                    </HeaderView>
-                    <ListItem template="{template}" image:image="{channelLogo}" program_name:text="{program_name}" duration:text="{duration}"/>
-                </ListSection>
-                <ListSection id="allChannels" dataCollection="channel" dataTransform="transformChannelModel">
-                    <HeaderView>
-                        <View class="section">
-                            <Label class="section_text" text="All Channels"></Label>
-                        </View>
-                    </HeaderView>
-                    <ListItem template="{template}" image:image="{channelLogo}" program_name:text="{program_name}" duration:text="{duration}"/>
-                </ListSection>
-            </ListView>
-        </View>
-        <Toolbar platform="ios">
-            <Items>
-                <Button id="send" title="test" />
-                <FlexSpace/>
-                <Button id="contact" systemButton="ORGANIZE" />
-                <FlexSpace/>
-                <Button id="contact" systemButton="CONTACT_ADD" />
-                <FlexSpace/>
-                <Button id="contact" systemButton="TRASH" />
-                <FlexSpace/>
-                <Button id="about" systemButton="INFO_DARK" />
-            </Items>
-        </Toolbar>
-        <View id="footer" platform="android"></View>
+    <Window id="hubWin" translucent="false" class="container navWin" title="Tviller">
+        <ListView id="channelsView" defaultItemTemplate="channel-template">
+            <Templates>
+                <ItemTemplate name="channel-template" class="row" bindId="channel">
+                    <ImageView bindId="image" class="img"/>
+                    <Label bindId="program_name" class="row_title"/>
+                    <Label bindId="duration" class="row_subtitle"/>
+                </ItemTemplate>
+            </Templates>
+            <ListSection id="toplist" dataCollection="toplist" dataTransform="transformChannelModel">
+                <HeaderView>
+                    <View class="section">
+                        <Label class="section_text" text="Popular Channels"></Label>
+                    </View>
+                </HeaderView>
+                <ListItem template="{template}" channel:id="{id}" image:image="{channelLogo}" program_name:text="{program_name}" duration:text="{duration}"/>
+            </ListSection>
+            <ListSection id="allChannels" dataCollection="channel" dataTransform="transformChannelModel">
+                <HeaderView>
+                    <View class="section">
+                        <Label class="section_text" text="All Channels"></Label>
+                    </View>
+                </HeaderView>
+                <ListItem template="{template}" channel:id="{id}" image:image="{channelLogo}" program_name:text="{program_name}" duration:text="{duration}"/>
+            </ListSection>
+        </ListView>
     </Window>
 </Alloy>

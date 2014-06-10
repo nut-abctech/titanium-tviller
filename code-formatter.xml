@@ -114,7 +114,7 @@
 <setting id="js.formatter.spaces.before.conditional.parentheses.closing" value="0"/>
 <setting id="xml.formatter.line.before.non.xml" value="1"/>
 <setting id="js.formatter.formatter.on.off.enabled" value="false"/>
-<setting id="js.formatter.newline.before.else" value="true"/>
+<setting id="js.formatter.newline.before.else" value="false"/>
 <setting id="js.formatter.spaces.before.semicolon.operator" value="0"/>
 <setting id="xml.formatter.line.after.element" value="0"/>
 <setting id="js.formatter.newline.before.finally" value="false"/>
